@@ -1,0 +1,57 @@
+ALGORITHM algorithm_namepp
+    Algorithm AnalyzeSentence
+        Var
+        sentence: String
+        length, wordCount, vowelCount: Integer
+        character: Character
+        endOfSentence: Boolean
+        
+        Begin
+        length <- 0
+        wordCount <- 0
+        vowelCount <- 0
+        endOfSentence <- False
+
+        
+        Display "Enter a sentence ending with a period: "
+        Read sentence
+
+        For each character in sentence Do
+    
+        length <- length + 1
+
+            
+            If character = ' ' Then
+                
+            wordCount <- wordCount + 1
+            End If
+
+            
+            If IsVowel(character) Then
+                vowelCount <- vowelCount + 1
+            End If
+
+            
+            If character = '.' Then
+                endOfSentence <- True
+            End If
+        End For
+
+        
+        wordCount <- wordCount + 1
+
+        
+        Display "The length of the sentence is: ", length
+        Display "The number of words in the sentence is: ", wordCount
+        Display "The number of vowels in the sentence is: ", vowelCount
+    End
+
+    Function IsVowel(character: Character) -> Boolean
+    Begin
+        
+        If character = 'a' Or character = 'e' Or character = 'i' Or character = 'o' Or character = 'u' Or character = 'y' Then
+            Return True
+        Else
+            Return False
+        End If
+    End
