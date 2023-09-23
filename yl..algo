@@ -1,57 +1,38 @@
-ALGORITHM algorithm_namepp
-    Algorithm AnalyzeSentence
-        Var
-        sentence: String
-        length, wordCount, vowelCount: Integer
-        character: Character
-        endOfSentence: Boolean
-        
-        Begin
-        length <- 0
-        wordCount <- 0
-        vowelCount <- 0
-        endOfSentence <- False
+ALGORITHM problrm
+VAR
+    str : STRING := "the best in the world";
+    count : INTEGER : = 0;
+BEGIN
+    FOR (int i=0; i< str.length(); i++) DO 
+        IF (str.charAt[i] ="") THEN
+            count++;
+            END_IF
+    END
+    ALGORITHM pot
+    VAR
+    str : STRING : = "the best in the world";
+    count : INTEGER -1
+    BEGIN
+        FOR i in str DO 
+            IF i == "" THEN
+                count +=1;
+            END_IF
+        END FOR 
+        write (count)
+    END        
 
-        
-        Display "Enter a sentence ending with a period: "
-        Read sentence
+    ALGORITHM algorithmpo
+    VAR
+        str : STRING : = "the best in th wor";
+        voewls : CHAR : = ["a","e","i","o","u"]
+        count : INTEGER = 0;
+    BEGIN
+        FOR i in str DO
+            IF i in vowels THEN
+                count += 1
+            END_IF
+            num vowels = count;
+        END FOR 
+        write (num_vowels);    
+    END
 
-        For each character in sentence Do
-    
-        length <- length + 1
-
-            
-            If character = ' ' Then
-                
-            wordCount <- wordCount + 1
-            End If
-
-            
-            If IsVowel(character) Then
-                vowelCount <- vowelCount + 1
-            End If
-
-            
-            If character = '.' Then
-                endOfSentence <- True
-            End If
-        End For
-
-        
-        wordCount <- wordCount + 1
-
-        
-        Display "The length of the sentence is: ", length
-        Display "The number of words in the sentence is: ", wordCount
-        Display "The number of vowels in the sentence is: ", vowelCount
-    End
-
-    Function IsVowel(character: Character) -> Boolean
-    Begin
-        
-        If character = 'a' Or character = 'e' Or character = 'i' Or character = 'o' Or character = 'u' Or character = 'y' Then
-            Return True
-        Else
-            Return False
-        End If
-    End
